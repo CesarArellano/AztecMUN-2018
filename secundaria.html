@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="shortcut icon" href="images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AZTECMUN</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <link type="text/css" rel="stylesheet" href="css/bulma.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+</head>
+<body>
+    <div class="header">
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/fondo.jpg" class="responsive-img"></div>
+      </div>
+      <nav class="nav-extended #2e7d32 green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo hide-on-large-only">AZTECMUN</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row show-on-large-only hide-on-med-and-down">
+               <ul>
+               <div class="col s2"><li><a class="white-text" href="index.html">Bienvenida</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="Nosotros.html">Sobre nosotros</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="comites.html">Comités</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="organizador.html">C. Organizador</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="documentos.html">Documentos</a></li></div>
+               <div class="col s1"><li><a class="white-text" href="seleccion.html">Regístrate</a></li></div>
+               <div class="col s1"><li><a class="dropdown-button tooltipped" data-position="top" data-delay="50" data-tooltip="Contáctanos" href="contacto.html"><i class="material-icons right">assignment</i></a></li></div>
+             </ul>
+               </div>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Bienvenida</a></li>
+          <li><a href="Nosotros.html">Sobre nosotros</a></li>
+          <li><a href="comites.html">Comités</a></li>
+          <li><a href="organizador.html">Comité organizador</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li class="divider"></li>
+          <li><a href="seleccion.html">Regístrate</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <div class="contenido">
+        <div class="contenedor container">
+          <div class="row">
+            <div class="col s12">
+              <div class="respuesta center" style= "margin-top: 5%;">
+                <p id="respuesta" class="flow-text"></p>
+              </div>
+              <div class="card z-depth-5" id="formulario" style= "margin-top: 3%;">
+                <div class="card-content">
+                  <span class="card-title center">¡Regístrate!</span>
+                  <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test1">Datos personales</a></li>
+                    <li class="tab col s3"><a href="#test2">Comité</a></li>
+                    <li class="tab col s3"><a href="#test3">Datos de contacto</a></li>
+                  </ul>
+                </div>
+                  <form method="post" onsubmit="return insertar();">
+                  <div id="test1">
+                    <div class="container">
+                      <div class="input-field">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="nombre" id="nombre" value="">
+                        <label for="nombre">Nombre completo</label>
+                      </div>
+                      <div class="input-field">
+                        <i class="material-icons prefix">assignment_turned_in</i>
+                        <input type="number" name="matricula" id="matricula">
+                        <label for="matricula">Matricula</label>
+                      </div>
+                      <div class="input-field" id="secundaria">
+                        <i class="material-icons prefix">group</i>
+                        <select name="sel2" id="sel2" >
+                          <option value="" disabled selected>Selecciona tú grupo</option>
+                        </select>
+                        <label>Grupos</label>
+                      </div>
+                      <br>
+
+                    </div>
+                  </div>
+                 <div id="test2">
+                     <center>
+                    <div class="container center">
+                     <div class="select is-multiple">
+                        <i class="material-icons prefix">account_balance</i>
+                        <select name="comite" id="comite" class="browser-default">
+                          <option value="" disabled selected>Selecciona un comité</option>
+                          <option value="CDE">CDE</option>
+                          <option value="NATO">NATO</option>
+                          <option value="CIJ">CIJ</option>
+                          <option value="UNEP">UNEP</option>
+                            </select>
+                      </div>
+                       <div class="select is-multiple">
+                        <i class="material-icons prefix">group_add</i>
+                        <select  name="pais" id="pais" class="browser-default">
+                          <option value="" disabled selected>Selecciona un país</option>
+                        </select>
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+
+                      </div>
+                  <div id="test3">
+                    <div class="container">
+                      <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" name="mail" id="mail" >
+                        <label for="mail">Ingrese su correo electrónico</label>
+                      </div>
+                      <div class="input-field">
+                        <i class="material-icons prefix">phone</i>
+                        <input type="number" name="numero" id="numero" >
+                        <label for="numero">Ingrese un número de contacto</label>
+                      </div>
+                      <div class="center">
+                        <button class="btn waves-effect waves-light #2e7d32 green darken-2" type="submit" name="action">Registrarse
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                      <br>
+                      <div class="center">
+                        <b><p id="validacion" class="center"></p></b>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>
+  </section>
+</body>
+<script type="text/javascript">
+  $("#comite").change(function(){
+    comite = document.getElementById('comite').value;
+    console.log(comite);
+    $.post("test.php", { comite: comite }, function(data){
+      console.log(data);
+      console.log(data.length);
+      pais = document.getElementById('pais');
+      $("#pais").empty().append($("<option disabled selected>Selecciona un país<option>"));
+      for (var i = 0; i < data.length; i++) {
+        pais.options[i+1] = new Option(data[i], data[i]);
+      }
+    }, "json");
+  });
+</script>
+
+<script type="text/javascript">
+  Grupos = [1101,1102,1103,1104,1105,1106,1107,1108,1109,2101,2102,2103,2104,2105,2106,2107,2108, 2109,2110,3101,3102,3103,3104,3105,3106,3107,3108, 3109, 1201,1202,1203,1204,1205,1206,1206,1207,1208,1209,1210,2201,2202,2203,2204,2205,2206,2207,2208, 2209, 2210, 3201,3202,3203,3204,3205,3206,3207,3208, 3209];
+  var s2 = document.getElementById('sel2');
+    for (var i = 0; i < Grupos.length ; i++) {
+      s2.options[i+1] = new Option(Grupos[i], Grupos[i]);
+    }
+
+</script>
+<script>
+    $(document).ready(function(){
+       $('.carousel.carousel-slider').carousel({fullWidth: true});
+       $(".button-collapse").sideNav();
+       $('ul.tabs').tabs();
+       $('select').material_select();
+    });
+</script>
+</html>

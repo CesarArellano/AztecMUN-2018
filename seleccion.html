@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="shortcut icon" href="images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AZTECMUN</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+</head>
+<body>
+    <div class="header">
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/fondo.jpg" class="responsive-img"></div>
+      </div>
+      <nav class="nav-extended #2e7d32 green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo hide-on-large-only">AZTECMUN</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row show-on-large-only hide-on-med-and-down">
+               <ul>
+               <div class="col s2"><li><a class="white-text" href="index.html">Bienvenida</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="Nosotros.html">Sobre nosotros</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="comites.html">Comités</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="organizador.html">C. Organizador</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="documentos.html">Documentos</a></li></div>
+               <div class="col s1"><li><a class="white-text" href="seleccion.html">Regístrate</a></li></div>
+               <div class="col s1"><li><a class="dropdown-button tooltipped" data-position="top" data-delay="50" data-tooltip="Contáctanos" href="contacto.html"><i class="material-icons right">assignment</i></a></li></div>
+             </ul>
+               </div>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Bienvenida</a></li>
+          <li><a href="Nosotros.html!">Sobre nosotros</a></li>
+          <li><a href="comites.html">Comités</a></li>
+          <li><a href="organizador.html">Comité organizador</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li class="divider"></li>
+          <li><a href="seleccion.html">Regístrate</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="center">
+        <h4>Selecciona:</h4>
+        <form action="seleccion.php" method="post">
+          <br>
+          <div class="center">
+            <input name="valores" type="radio" id="test1" value="Secundaria"/>
+            <label for="test1">Secundaria</label>
+            <input name="valores" type="radio" id="test2" value="Bachillerato"/>
+            <label for="test2">Bachillerato</label><br><br>
+            <button class="btn waves-effect waves-light #2e7d32 green darken-2" type="submit" name="action">Continuar
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="shortcut icon" href="images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AZTECMUN</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.3.2/sweetalert2.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+</head>
+<body>
+    <div class="header">
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/fondo.jpg" class="responsive-img"></div>
+      </div>
+      <nav class="nav-extended #2e7d32 green darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo hide-on-large-only">AZTECMUN</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row show-on-large-only hide-on-med-and-down">
+               <ul>
+               <div class="col s2"><li><a class="white-text" href="index.html">Bienvenida</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="Nosotros.html">Sobre nosotros</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="comites.html">Comités</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="organizador.html">C. Organizador</a></li></div>
+               <div class="col s2"><li><a class="white-text" href="documentos.html">Documentos</a></li></div>
+               <div class="col s1"><li><a class="white-text" href="seleccion.html">Regístrate</a></li></div>
+               <div class="col s1"><li><a class="dropdown-button tooltipped" data-position="top" data-delay="50" data-tooltip="Contáctanos" href="contacto.html"><i class="material-icons right">assignment</i></a></li></div>
+             </ul>
+               </div>
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Bienvenida</a></li>
+          <li><a href="Nosotros.html">Sobre nosotros</a></li>
+          <li><a href="comites.html">Comités</a></li>
+          <li><a href="organizador.html">Comité organizador</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li class="divider"></li>
+          <li><a href="seleccion.html">Regístrate</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+  <div class="col s12 m12">
+    <div class="container">
+      <div class="card section scrollspy hoverable" id="contact">
+        <div class="card-content">
+          <span class="card-title center"><b>¡Contáctanos!</b></span>
+          <form action="procesar.php" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden"/><input type="hidden" name="authenticity_token"/>
+            <div class="input-field">
+              <i class="material-icons prefix">account_circle</i>
+              <label for="nombre">Ingrese su nombre</label>
+              <input type="text" name="nombre" id="nombre" required="required" />
+            </div>
+           <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" name="mail" id="mail" >
+                        <label for="mail">Ingrese su correo electrónico</label>
+                      </div>
+            <div class="input-field">
+              <i class="material-icons prefix">contact_mail</i>
+              <label for="asunto">Ingrese el asunto</label>
+              <input type="text" name="asunto" id="asunto" required="required" />
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">record_voice_over</i>
+              <label for="comentario">Ingrese el comentario</label>
+              <textarea class="materialize-textarea" required="required" name="comentario" id="comentario">
+</textarea>
+            </div>
+            <div class="input-field">
+              <center>
+                <button class="btn waves-effect waves-light green darken-2" type="submit" name="action">Envíar Comentario
+                  <i class="material-icons right">send</i>
+                </button>
+              </center>
+            </div>
+</form>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+<script>
+    $(document).ready(function(){
+         $('.parallax').parallax();
+       $('.carousel.carousel-slider').carousel({fullWidth: true});
+       $(".button-collapse").sideNav();
+    });
+</script>
+</html>

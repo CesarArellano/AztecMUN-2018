@@ -1,0 +1,37 @@
+.tabs .tab a{
+            color:#2e7d32;
+        } /*Black color to the text*/
+
+        .tabs .tab a:hover {
+            background-color:#ffffff;
+            color:#2e7d32;
+        } /*Text color on hover*/
+
+        .tabs .tab a.active {
+            background-color:#ffffff;
+            color:#2e7d32;
+        } /*Background and text color when a tab is active*/
+
+        .tabs .indicator {
+            background-color:#2e7d32;
+        } 
+        
+    @media all and (min-width:1600px){
+        .sg {
+            margin-left:220px;
+            width:500px;
+            height:650px;
+            }
+        .ssg {
+            margin-left:80px;
+            width:825px;
+            height:650px;
+            }
+    }
+@media all and (min-width:1850px){
+.logo_nato{
+            width:300px;
+            height:300px;
+            }
+    
+}

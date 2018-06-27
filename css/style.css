@@ -1,0 +1,31 @@
+.content{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.imagen{
+  max-width: 100%;
+  height: 400px;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+.header{
+  width: 100%;
+  height: 40%;
+}
+.contenido{
+  width: 100%;
+  height: 50%;
+}
+.parallax-container{
+  height: 80%;
+}
+.nav{
+  height: 10%;
+}
